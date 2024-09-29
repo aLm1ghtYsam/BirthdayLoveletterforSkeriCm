@@ -1,0 +1,99 @@
+body {
+    background-color: #ffe6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #ffb3b3;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: shake 0.5s infinite alternate;
+}
+
+@keyframes shake {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.heart {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background-color: #ff6666;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    background-color: #ff6666;
+    border-radius: 50%;
+}
+
+.heart::before {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: 0;
+}
+
+.heart::after {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: 40px;
+}
+
+.password-container {
+    margin: 20px 0;
+}
+
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ff9999;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4d4d;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.letter {
+    background-color: #fff0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    margin-top: 20px;
+}
